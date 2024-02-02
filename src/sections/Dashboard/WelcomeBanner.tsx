@@ -101,9 +101,6 @@ export function WelcomeBanner() {
     <Welcome>
       <div>
         <h1>Welcome to $SOS Arcade 👋</h1>
-        <p>
-          A fair, simple and decentralized casino arcade on Solana.
-        </p>
       </div>
       <Buttons>
         <button onClick={() => window.open('https://jup.ag/swap/SOL-2mnGSkXH1h6x5qmhwoQzAZDKa83vnRf8wNkNWVbdv7w5', '_blank')}>
