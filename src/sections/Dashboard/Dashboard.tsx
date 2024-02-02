@@ -17,6 +17,32 @@ export function GameSlider() {
   )
 }
 
+function ColorfulHeading({ text }) {
+  const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33F6', '#F6FF33']
+
+  const textStyle = {
+    color: 'white',
+    textShadow: `
+      -1px -1px 0 #808080,  
+       1px -1px 0 #808080,
+      -1px  1px 0 #808080,
+       1px  1px 0 #808080`,
+    margin: '0 2px', 
+  };
+
+  return (
+    <h2 style={{ textAlign: 'center' }}>
+      {text.split('').map((letter, index) => (
+        <span key={index} style={{ ...textStyle, color: colors[index % colors.length] }}>
+          {letter}
+        </span>
+      ))}
+    </h2>
+  )
+}
+
+
+
 const Grid = styled.div`
   display: grid;
   gap: 1rem;
@@ -46,7 +72,7 @@ export default function Dashboard() {
   return (
     <>
       <WelcomeBanner />
-      <h2 style={{ textAlign: 'center' }}>Games</h2>
+      <ColorfulHeading text="GAMES" />
       <GameGrid />
     </>
   )

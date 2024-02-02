@@ -31,7 +31,7 @@ export const Option = styled.button<{ selected?: boolean }>`
   border-radius: 10px;
   cursor: pointer;
   font-size: 20px;
-  color: white;
+  color: black;
   & > div:first-child {
     font-size: 48px;
     filter: drop-shadow(-4px 4px 2px #00000066);

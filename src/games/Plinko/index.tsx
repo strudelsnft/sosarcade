@@ -7,6 +7,9 @@ import BUMP from './bump.mp3'
 import FALL from './fall.mp3'
 import WIN from './win.mp3'
 
+const plinkoImage = new Image()
+plinkoImage.src = './ball.png'
+
 function usePlinko(props: PlinkoProps, deps: React.DependencyList) {
   const [plinko, set] = React.useState<PlinkoGame>(null!)
 
@@ -44,6 +47,8 @@ export default function Plinko() {
   const rows = degen ? 12 : 14
 
   const multipliers = React.useMemo(() => Array.from(new Set(bet)), [bet])
+
+  
 
   const plinko = usePlinko({
     rows,
@@ -106,10 +111,11 @@ export default function Plinko() {
             } else {
               bodies.forEach(
                 (body, i) => {
-                  const { label, position } = body
+                  const { label, position, angle  } = body
                   if (label === 'Peg') {
                     ctx.save()
                     ctx.translate(position.x, position.y)
+                    ctx.rotate(angle)
 
                     const animation = pegAnimations.current[body.plugin.pegIndex] ?? 0
 
@@ -133,17 +139,16 @@ export default function Plinko() {
                   }
                   if (label === 'Plinko') {
                     ctx.save()
-                    ctx.translate(position.x, position.y)
-
-                    ctx.fillStyle = 'hsla(' + (i * 420 % 360) + ', 75%, 90%, .2)'
-                    ctx.beginPath()
-                    ctx.arc(0, 0, PLINKO_RAIUS * 1.5, 0, Math.PI * 2)
-                    ctx.fill()
-
-                    ctx.fillStyle = 'hsla(' + (i * 420 % 360) + ', 75%, 75%, 1)'
-                    ctx.beginPath()
-                    ctx.arc(0, 0, PLINKO_RAIUS, 0, Math.PI * 2)
-                    ctx.fill()
+                    ctx.translate(position.x, position.y) // Apply scaling
+                    ctx.rotate(angle)
+                
+                    // Since the image might not be loaded immediately, you should only draw it if it's loaded
+                    if (plinkoImage.complete) {
+                      // Draw the image centered on the Plinko's position
+                      const size = PLINKO_RAIUS * 4 // The image size should be twice the radius
+                      ctx.drawImage(plinkoImage, -size / 2, -size / 2, size, size)
+                    }
+                
 
                     ctx.restore()
                   }

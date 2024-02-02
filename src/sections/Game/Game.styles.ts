@@ -65,7 +65,7 @@ export const Splash = styled.div`
 export const Screen = styled.div`
   position: relative;
   flex-grow: 1;
-  background: #0c0c11;
+  background: #ffffff11;
   border-radius: 10px;
   overflow: hidden;
   transition: height .2s ease;
@@ -117,7 +117,7 @@ export const LoadingIndicator = styled.div<{$active: boolean}>`
 
 export const Controls = styled.div`
   width: 100%;
-  background: rgb(26, 27, 40);
+  background: #8a8c7d;
   padding: 20px;
   color: white;
   border-radius: 10px;

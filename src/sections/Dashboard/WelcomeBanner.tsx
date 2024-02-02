@@ -58,8 +58,8 @@ const Welcome = styled.div`
     }
   }
 
-  background: linear-gradient(-45deg, #ffb07c, #ff3e88, #2969ff, #ef3cff, #ff3c87);
-  background-size: 300% 300%;
+  background: linear-gradient(-45deg, #df9eee, #FFF5C3, #91f2df, #FFF5C3, #ff3c87);
+  background-size: 300% 300%, contain;
   animation: welcome-fade-in .5s ease, backgroundGradient 30s ease infinite;
   border-radius: 10px;
   position: relative;
@@ -94,13 +94,32 @@ const Welcome = styled.div`
       padding: 40px;
     }
   }
+  z-index: 1;
 `
+
+const ImageWrapper = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 35%;
+  bottom: -5;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // This ensures the image covers the div without stretching
+  }
+`;
+
+
 
 export function WelcomeBanner() {
   return (
     <Welcome>
+      <ImageWrapper>
+        <img src={"/logo.svg" }/>
+      </ImageWrapper>
       <div>
-        <h1>Welcome to $SOS Arcade 👋</h1>
+        {/* <h1>Welcome to $SOS Arcade 👋</h1> */}
       </div>
       <Buttons>
         <button onClick={() => window.open('https://jup.ag/swap/SOL-2mnGSkXH1h6x5qmhwoQzAZDKa83vnRf8wNkNWVbdv7w5', '_blank')}>

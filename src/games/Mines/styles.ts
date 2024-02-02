@@ -76,7 +76,7 @@ export const Grid = styled.div`
 
 export const Levels = styled.div`
   border-radius: 5px;
-  color: gray;
+  color: white;
   background: #292a307d;
   overflow: hidden;
   width: 100%;
@@ -96,7 +96,7 @@ export const Level = styled.div<{$active: boolean}>`
 
   & > div:first-child {
     font-size: 60%;
-    color: gray;
+    color: white;
   }
 
   ${(props) => props.$active && css`

@@ -89,15 +89,19 @@ export class Plinko {
   }
 
   private makePlinko = (offsetX: number, index: number) => {
-    const x = this.width / 2 + offsetX
-    const y = -10
+    const x = this.width / 2 + offsetX;
+    const y = -10;
     return Matter.Bodies.circle(x, y, PLINKO_RAIUS, {
       restitution: RESTISTUTION,
       collisionFilter: { group: -6969 },
       label: 'Plinko',
-      plugin: { startPositionIndex: index },
-    })
-  }
+      plugin: {
+        startPositionIndex: index,
+        imageUrl: './ball.png', // Add the image URL here
+      },
+    });
+  };
+  
 
   single() {
     Matter.Events.off(this.engine, 'collisionStart', this.collisionHandler)

@@ -3,19 +3,19 @@
 }
 
 :root {
-  --background-color: #0b0b0e;
-  --text-color: #ffffff;
+  --background-color: #f6ffe0;
+  --text-color: #000000;
 
   --gamba-ui-border-radius: 10px;
 
-  --gamba-ui-button-default-background: #0e0e16;
+  --gamba-ui-button-default-background: #adae9b;
   --gamba-ui-button-default-background-hover: #11111d;
   --gamba-ui-button-default-color: white;
 
-  --gamba-ui-button-main-background: #8851ff;
-  --gamba-ui-button-main-background-hover: #9564ff;
+  --gamba-ui-button-main-background: #adae9b;
+  --gamba-ui-button-main-background-hover: #979886;
 
-  --gamba-ui-input-background: #0e0e16;
+  --gamba-ui-input-background: #adae9b;
   --gamba-ui-input-color: #ffffff;
   --gamba-ui-input-background-hover: #11111d;
 }

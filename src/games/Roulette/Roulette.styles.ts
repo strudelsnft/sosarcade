@@ -38,7 +38,7 @@ export const StyledBetButton = styled.div<{$highlighted?: boolean, $color?: 'bla
   border-radius: 5px;
   padding: 10px 10px;
   box-shadow: 0 0 0 1px var(--border-color);
-  color: white;
+  color: gray;
   width: 60px;
   cursor: pointer;
   text-align: center;

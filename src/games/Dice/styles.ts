@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  color: white;
+  color: black;
   user-select: none;
   width: min(100vw, 420px);
   font-size: 20px;
@@ -22,7 +22,7 @@ export const Stats = styled.div`
 
 export const RollUnder = styled.div`
   display: flex;
-  color: white;
+  color: black;
 
   margin-bottom: 20px;
 
