@@ -65,7 +65,7 @@ export default function App() {
 
 
 function ColorfulHeading({ text }) {
-  const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33F6', '#F6FF33']; // Example colors
+  const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33F6', '#F6FF33']
 
   const textStyle = {
     color: 'white',
