@@ -12,14 +12,14 @@ export const PLATFORM_SHARABLE_URL = 'v2-play.gamba.so'
 
 // List of tokens supported by this platform
 export const TOKENS: TokenMeta[] = [
-  GambaStandardTokens.sol,
   {
     mint: new PublicKey("2mnGSkXH1h6x5qmhwoQzAZDKa83vnRf8wNkNWVbdv7w5"),
     symbol: '$SOS',
     name: 'Strudels on Solana',
     image: "https://img.fotofolio.xyz/?url=https%3A%2F%2Farweave.net%2FQbMVjKRsPJp2mghhed--03EhCeSS68Vum6QlxPgCRvo",
     decimals: 2,
-    baseWager: 20000 * 1e2,
+    baseWager: 10000 * 1e2,
   },
+  GambaStandardTokens.sol,
   GambaStandardTokens.usdc,
 ]
