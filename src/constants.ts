@@ -15,10 +15,10 @@ export const TOKENS: TokenMeta[] = [
   GambaStandardTokens.sol,
   GambaStandardTokens.usdc,
   // {
-  //   mint: new PublicKey(""),
-  //   symbol: '???',
-  //   name: 'Custom SPL Token',
-  //   image: "image url",
+  //   mint: new PublicKey("2mnGSkXH1h6x5qmhwoQzAZDKa83vnRf8wNkNWVbdv7w5"),
+  //   symbol: '$SOS',
+  //   name: 'Strudels on Solana',
+  //   image: "https://img.fotofolio.xyz/?url=https%3A%2F%2Farweave.net%2FQbMVjKRsPJp2mghhed--03EhCeSS68Vum6QlxPgCRvo",
   //   decimals: 1e9,
   //   baseWager: 1,
   // }
