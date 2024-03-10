@@ -44,13 +44,6 @@ export default function TokenSelect() {
     setVisible(!visible)
    }
 
-  useEffect(() => {
-    if (tokenList && tokenList.length > 0) {
-      const defaultToken = tokenList[0].mint; 
-      setToken(defaultToken);
-    }
-  }, [tokenList]);
-
   return (
     <div style={{ position: 'relative' }}>
       <GambaUi.Button onClick={click}>
