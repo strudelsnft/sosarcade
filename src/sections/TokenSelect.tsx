@@ -42,7 +42,14 @@ export default function TokenSelect() {
 
   const click = () => {
     setVisible(!visible)
-  }
+   }
+
+  useEffect(() => {
+    if (tokenList && tokenList.length > 0) {
+      const defaultToken = tokenList[0].mint; 
+      setToken(defaultToken);
+    }
+  }, [tokenList]);
 
   return (
     <div style={{ position: 'relative' }}>
